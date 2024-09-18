@@ -4058,3 +4058,10 @@ input, select, textarea {
 		width: 100%;
 		text-align: center;
 	}
+
+	.project-title{
+		text-decoration: underline;
+	}
+	.project-title:hover{
+		color: lightblue;
+	}
