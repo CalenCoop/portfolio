@@ -6,26 +6,46 @@
 
 /* Banner */
 
-	body.is-preload #banner h2 {
-		-moz-transform: none;
-		-webkit-transform: none;
-		-ms-transform: none;
-		transform: none;
-		opacity: 1;
-	}
+body.is-preload #banner h2 {
+  -moz-transform: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  opacity: 1;
+}
 
-		body.is-preload #banner h2:before, body.is-preload #banner h2:after {
-			width: 100%;
-		}
+body.is-preload #banner h2:before,
+body.is-preload #banner h2:after {
+  width: 100%;
+}
 
-	body.is-preload #banner .more {
-		-moz-transform: none;
-		-webkit-transform: none;
-		-ms-transform: none;
-		transform: none;
-		opacity: 1;
-	}
+body.is-preload #banner .more {
+  -moz-transform: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  opacity: 1;
+}
 
-	body.is-preload #banner:after {
-		opacity: 0;
-	}
+body.is-preload #banner:after {
+  opacity: 0;
+}
+/* Accessibility/UX touches */
+.project-title a {
+  border-bottom: none;
+}
+.project-title a:hover {
+  color: #76ddff;
+}
+
+a[aria-disabled="true"] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Reduce motion for folks who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,216 +1,515 @@
-<!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Calen Cooper Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calen Cooper Portfolio</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
 
-		 <!-- Open Graph Meta Tags -->
-		 <meta property="og:title" content="Calen Cooper Portfolio" />
-		 <meta property="og:description" content="Check out my portfolio showcasing my projects and experience as a Software Engineer." />
-		 <meta property="og:image" content="https://calencoop.github.io/portfolio/images/portfolio2.gif" />
-		 <meta property="og:url" content="https://calencoop.github.io/portfolio/" />
-		 <meta property="og:type" content="website" />
-	</head>
-	<body class="landing is-preload">
+    <link rel="canonical" href="https://calencoop.github.io/portfolio/" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Calen Cooper Portfolio" />
+    <meta
+      property="og:description"
+      content="Full-stack engineer (React/Node). Projects: CodeReview.ai, MealPreppers, and more. Open to junior roles & apprenticeships."
+    />
+    <meta
+      property="og:image"
+      content="https://calencoop.github.io/portfolio/images/portfolio2.gif"
+    />
+    <meta property="og:url" content="https://calencoop.github.io/portfolio/" />
+    <meta property="og:type" content="website" />
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Calen Cooper</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="#about-me">About Me</a></li>
-											<li><a href="#recent-projects">Recent Projects</a></li>
-											<li><a href="#contact-me">Contact Me</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Calen Cooper Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Full-stack engineer (React/Node). Projects: CodeReview.ai, MealPreppers, and more. Open to junior roles & apprenticeships."
+    />
+    <meta
+      name="twitter:image"
+      content="https://calencoop.github.io/portfolio/images/portfolio2.gif"
+    />
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2>Calen Cooper</h2>
-							<p>I'm a Software Engineer.<br />
-							I'm excited to work with <br />
-							you on our next project.</p>
-							<!-- <ul class="actions special">
-								<li><a href="#" class="button primary">Activate</a></li>
-							</ul> -->
-						</div>
-						<a href="#about-me" class="more scrolly">Learn More</a>
-					</section>
+    <!-- Inline overrides (safe, small, and specific) -->
+    <style>
+      /* Keep project/media visuals smaller & consistent */
+      .project-media {
+        display: flex;
+        justify-content: center;
+      }
+      .project-media img {
+        width: 100%;
+        max-width: 420px; /* target size */
+        aspect-ratio: 16 / 9; /* keep GIFs tidy */
+        object-fit: cover;
+        border-radius: 6px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+      }
 
-				<!-- One -->
-					<section id="about-me" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2>About me</h2>
-								<p>Hello there! 👋 <br />
-									I'm Calen, a passionate programmer and problem-solving addict. I bring a fresh perspective and a relentless curiosity for learning new concepts in the ever-evolving world of technology. I started my journey in programming with a foundation in HTML, CSS, and JavaScript. Over time, I've honed my skills and expanded my toolkit to include React, Typescript, Node.js and MongoDB, among other technologies. I thrive on the excitement of learning new skills and am always looking forward to adding more tools to my toolkit</p>
-							</header>
-							<ul class="icons major">
-								<li><span class="icon fa-gem major style1"><span class="label">Lorem</span></span></li>
-								<li><span class="icon fa-heart major style2"><span class="label">Ipsum</span></span></li>
-								<li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
-							</ul>
-						</div>
-					</section>
+      /* Slightly reduce the media column width on wide screens */
+      @media screen and (min-width: 981px) {
+        .spotlight .image {
+          width: 35% !important;
+        } /* was 40% */
+        .spotlight .content {
+          width: 65% !important;
+        } /* was 60% */
+      }
 
-				<!-- Two -->
-					<section id="recent-projects" class="wrapper alt style2">
-						<header class="major recent-projects-section">
-							<h2>Recent Projects</h2>
-							
-						</header>
-						<section class="spotlight">
-							<div class="image">
-								<a href="https://github.com/CalenCoop/MealPreppers" target="_blank">
-								<img src="images/MealPreppers.gif" alt="" />
-								</a>
-							</div>
-							<div class="content">
-								<a href="https://github.com/CalenCoop/MealPreppers"
-								target="_blank">
-								<h2 class="project-title">MealPreppers</h2>
-								</a>
-								<p>MealPreppers is a fullstack social media platform for food enthusiasts to share their meal prep ideas, recipes, and tips. Users can create posts, upload images, and connect with others who share their passion for meal prepping. The app offers an interactive and engaging way to discover new recipes, track meal costs, and estimate cooking times.</p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image">
-								<a href="https://github.com/CalenCoop/next-bollo-guella"
-								target="_blank">
-								<img src="images/Bollo Guella.gif" alt="" />
-								</a>
-							</div>
-							<div class="content">
-								<a href="https://github.com/CalenCoop/next-bollo-guella"
-								target="_blank">
-								<h2 class="project-title">Bollo Güella</h2>
-								</a>
-								<p> "Bollo Güella" is an artisan bread bakery located in Mendoza, Argentina. The website has been built using Next.js and Framer Motion for animations, providing an immersive and interactive experience for visitors. </p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<a href="https://github.com/CalenCoop/Exercise-Me"
-							target="_blank">
-							<div class="image"><img src="images/ExerciseMe.gif" alt="" />
-							</a>
-							</div>
-							<div class="content">
-								<a href="https://github.com/CalenCoop/Exercise-Me"
-								target="_blank">
-								<h2 class="project-title">Exercise-Me</h2>
-								</a>
-								<p>Exercise-Me is a dynamic fitness app designed to streamline your workout routine. Simply choose a body part, and the app instantly fetches tailored exercises from an external API, complete with engaging GIFs and instructions that demonstrate proper form. </p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<a href="https://github.com/CalenCoop/Shut-the-Box-Game"
-							target="_blank">
-							<div class="image"><img src="images/Shut the box.gif" alt="" />
-							</a>
-							</div>
-							<div class="content">
-								<a href="https://github.com/CalenCoop/Shut-the-Box-Game"
-								target="_blank">
-								<h2 class="project-title">Shut The Box</h2>
-								</a>
-								<p>Shut the Box is a traditional dice game where players roll dice and cover numbers to match the roll. The goal is to cover all numbers from 1 to 12. This app brings the fun of Shut the Box to the web, providing an engaging user interface and easy gameplay.
+      /* Skills: transparent section + pill badges */
+      #skills.wrapper {
+        background: transparent !important;
+      }
+      .skill-badges {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 18px;
+      }
+      .skill-badges .badge {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+        white-space: nowrap;
+      }
 
-								</p>
-							</div>
-						</section>
-					</section>
+      /* Project title hover—subtle and consistent with your theme */
+      .project-title a {
+        border-bottom: 0;
+        text-decoration: underline;
+      }
+      .project-title a:hover {
+        color: #76ddff;
+      }
 
-				<!-- Three -->
-				<!-- Contact Me Section -->
-		<section id="contact-me" class="wrapper style3 special">
-			<div class="inner">
-				<header class="major">
-					<h2>Contact Me</h2>
-					<p>If you'd like to get in touch, feel free to send me a message using the form below.</p>
-				</header>
-				<form action="https://api.web3forms.com/submit" method="POST">
-					<!-- Replace with your Access Key -->
-					<input type="hidden" name="access_key" value="88b7698f-1784-403a-94b8-3a080e0f4723">
+      /* Give About/Skills sections a bit more breathing room on small screens */
+      @media screen and (max-width: 736px) {
+        #about-me .inner,
+        #skills .inner {
+          padding: 0 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="landing is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header" class="alt" role="banner">
+        <h1><a href="index.html">Calen Cooper</a></h1>
+        <nav id="nav" aria-label="Primary">
+          <ul>
+            <li class="special">
+              <a
+                href="#menu"
+                class="menuToggle"
+                aria-haspopup="true"
+                aria-controls="menu"
+                aria-expanded="false"
+                ><span>Menu</span></a
+              >
+              <div id="menu" role="navigation" aria-label="Mobile">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="#about-me">About Me</a></li>
+                  <li><a href="#skills">Skills</a></li>
+                  <li><a href="#recent-projects">Recent Projects</a></li>
+                  <li><a href="#contact-me">Contact Me</a></li>
+                  <li>
+                    <a
+                      href="Calen-Cooper-Resume.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Resume</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-					<!-- Honeypot Spam Protection -->
-					<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+      <!-- Hero -->
+      <section id="banner">
+        <div class="inner">
+          <h2>Calen Cooper — Full-Stack Engineer</h2>
+          <p>I build fast, clean web apps with React &amp; Node.<br /></p>
+          <ul class="actions special">
+            <li>
+              <a href="#recent-projects" class="button primary">See My Work</a>
+            </li>
+            <li>
+              <a
+                href="Calen-Cooper-Resume.pdf"
+                class="button"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Resume
+              </a>
+            </li>
+            <li>
+              <a href="mailto:CalenCoop1@gmail.com" class="button">Email Me</a>
+            </li>
+          </ul>
+        </div>
+        <a href="#about-me" class="more scrolly" aria-label="Scroll to About Me"
+          >Learn More</a
+        >
+      </section>
 
-					<!-- Form Inputs -->
-					<div class="row gtr-uniform">
-						<div class="col-6 col-12-xsmall">
-							<input type="text" name="name" id="name" placeholder="Your Name" required />
-						</div>
-						<div class="col-6 col-12-xsmall">
-							<input type="email" name="email" id="email" placeholder="Your Email" required />
-						</div>
-						<div class="col-12">
-							<textarea name="message" id="message" placeholder="Your Message" rows="6" required></textarea>
-						</div>
-						<div class="col-12">
-							<ul class="actions special send-message">
-								<li><button type="submit" class="button primary">Send Message</button></li>
-							</ul>
-						</div>
-					</div>
-				</form>
-			</div>
-		</section>
+      <!-- About Me -->
+      <section id="about-me" class="wrapper style1 special">
+        <div class="inner">
+          <header class="major">
+            <h2>About Me</h2>
+            <h2>About Me</h2>
+            <p>
+              Hi, I’m Calen. I’m a full-stack engineer who loves taking an idea
+              and turning it into something people can actually use. I enjoy the
+              whole process, from sketching out the first version, to building
+              the API, to polishing the UI so it feels smooth and intuitive.
+            </p>
+            <p>
+              I work most often with React, Next.js, TypeScript, Node, and
+              MongoDB, but I’m always picking up new tools if they help me build
+              better products. What excites me most is creating clean,
+              maintainable code and collaborating with others to bring projects
+              to life.
+            </p>
+          </header>
+        </div>
+      </section>
 
-				<!-- CTA -->
-				<section id="cta" class="wrapper style4">
-					<div class="">
-						<header>
-							<h2>Stay up to Date on me</h2>
-							<!-- <p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p> -->
-						</header>
-						<ul class="icons social-media-icons">
-							<li><a href="https://www.linkedin.com/in/calencooper/" 
-								class="icon brands fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
-							<li><a href="https://github.com/CalenCoop" class="icon brands fa-github" target="_blank" ><span class="label">Github</span></a></li>
-							<li><a href="https://x.com/CalenCoop" class="icon brands fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
-							<li><a href="mailto:CalenCoop1@gmail.com" class="icon solid fa-envelope" target="_blank"><span class="label">Email</span></a></li>
-						</ul>
-					</div>
-				</section>
+      <!-- Skills (transparent + badges) -->
+      <section id="skills" class="wrapper style4 special">
+        <div class="inner">
+          <h2>Skills</h2>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<!-- <ul class="copyright">
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
-						</ul>
-					</footer>
+          <!-- Core skills you can demo today -->
+          <ul class="skill-badges" aria-label="Core skills">
+            <li class="badge">React</li>
+            <li class="badge">Next.js</li>
+            <li class="badge">TypeScript</li>
+            <li class="badge">Node.js</li>
+            <li class="badge">Express</li>
+            <li class="badge">REST APIs</li>
+            <li class="badge">MongoDB</li>
+            <li class="badge">Prisma</li>
+            <li class="badge">Auth (JWT)</li>
+            <li class="badge">Tailwind</li>
+            <li class="badge">Git/GitHub</li>
+            <li class="badge">Vercel</li>
+            <li class="badge">Cloudinary</li>
+            <li class="badge">Postman</li>
+            <!-- Example placeholders; delete if not true for you:
+      <li class="badge">Zod</li>
+      <li class="badge">React Query</li>
+      <li class="badge">Docker</li>
+      -->
+          </ul>
+        </div>
+      </section>
 
-			</div>
+      <!-- Recent Projects -->
+      <section id="recent-projects" class="wrapper alt style2">
+        <header class="major recent-projects-section">
+          <h2>Recent Projects</h2>
+        </header>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <section class="spotlight">
+          <div class="image project-media">
+            <a
+              href="https://github.com/CalenCoop/CodeReview.AI"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="images/CodeReview.gif"
+                alt="CodeReview.ai reviewing a GitHub pull request"
+                loading="lazy"
+                width="960"
+                height="540"
+              />
+            </a>
+          </div>
+          <div class="content">
+            <h2 class="project-title">
+              <a
+                href="https://github.com/CalenCoop/CodeReview.AI"
+                target="_blank"
+                rel="noopener noreferrer"
+                >CodeReview.ai</a
+              >
+            </h2>
+            <p>
+              <strong>What it is:</strong> Paste a GitHub repo, pick a PR, and
+              get an AI first-pass review on selected files.<br />
+              <strong>Value:</strong> Flags potential bugs, security risks, and
+              best-practice issues before human review.<br />
+              <strong>Stack:</strong> Next.js, React, Node, OpenAI, GitHub API,
+              Tailwind
+            </p>
+          </div>
+        </section>
 
-	</body>
+        <section class="spotlight">
+          <div class="image project-media">
+            <a
+              href="https://github.com/CalenCoop/MealPreppers"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="images/MealPreppers.gif"
+                alt="MealPreppers recipe post grid with images and like buttons"
+                loading="lazy"
+                width="960"
+                height="540"
+              />
+            </a>
+          </div>
+          <div class="content">
+            <h2 class="project-title">
+              <a
+                href="https://github.com/CalenCoop/MealPreppers"
+                target="_blank"
+                rel="noopener noreferrer"
+                >MealPreppers</a
+              >
+            </h2>
+            <p>
+              <strong>What it is:</strong> Social platform for sharing meal-prep
+              recipes, photos, and tips.<br />
+              <strong>Value:</strong> Discover recipes, track cost &amp; prep
+              time, follow creators.<br />
+              <strong>Stack:</strong> React, Node, MongoDB, Cloudinary, JWT Auth
+            </p>
+          </div>
+        </section>
+
+        <section class="spotlight">
+          <div class="image project-media">
+            <a
+              href="https://github.com/CalenCoop/next-bollo-guella"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="images/Bollo Guella.gif"
+                alt="Bollo Güella bakery homepage with hero and animated sections"
+                loading="lazy"
+                width="960"
+                height="540"
+              />
+            </a>
+          </div>
+          <div class="content">
+            <h2 class="project-title">
+              <a
+                href="https://github.com/CalenCoop/next-bollo-guella"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Bollo Güella</a
+              >
+            </h2>
+            <p>
+              <strong>What it is:</strong> Next.js site for an artisan bakery in
+              Mendoza with smooth animations.<br />
+              <strong>Value:</strong> Clear product story and performant,
+              mobile-first UX.<br />
+              <strong>Stack:</strong> Next.js, React, Framer Motion, Tailwind
+            </p>
+          </div>
+        </section>
+
+        <section class="spotlight">
+          <div class="image project-media">
+            <a
+              href="https://github.com/CalenCoop/Exercise-Me"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="images/ExerciseMe.gif"
+                alt="Exercise-Me app showing exercise list with GIF demos"
+                loading="lazy"
+                width="960"
+                height="540"
+              />
+            </a>
+          </div>
+          <div class="content">
+            <h2 class="project-title">
+              <a
+                href="https://github.com/CalenCoop/Exercise-Me"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Exercise-Me</a
+              >
+            </h2>
+            <p>
+              <strong>What it is:</strong> Fitness explorer—pick a body part and
+              get exercises with demos &amp; instructions.<br />
+              <strong>Value:</strong> Quickly find visual, form-correct
+              workouts.<br />
+              <strong>Stack:</strong> React, ExerciseDB API
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <!-- Contact Me -->
+      <section id="contact-me" class="wrapper style3 special">
+        <div class="inner">
+          <header class="major">
+            <h2>Contact Me</h2>
+            <p>
+              Want to collaborate or chat about a role? Use the form below —
+              I’ll respond within a day.
+            </p>
+          </header>
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="88b7698f-1784-403a-94b8-3a080e0f4723"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="Portfolio contact from calencoop.github.io"
+            />
+            <input type="hidden" name="from_name" value="Portfolio Site" />
+            <input
+              type="hidden"
+              name="redirect"
+              value="https://calencoop.github.io/portfolio/success.html"
+            />
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none"
+              tabindex="-1"
+              autocomplete="off"
+            />
+
+            <div class="row gtr-uniform">
+              <div class="col-6 col-12-xsmall">
+                <label for="name">Your Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <label for="email">Your Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <label for="message">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Your Message"
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <ul class="actions special send-message">
+                  <li>
+                    <button type="submit" class="button primary">
+                      Send Message
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section id="cta" class="wrapper style4">
+        <div class="">
+          <header><h2>Stay Up to Date with Me</h2></header>
+          <ul class="icons social-media-icons" aria-label="Social links">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/calencooper/"
+                class="icon brands fa-linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                ><span class="label">Linkedin</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/CalenCoop"
+                class="icon brands fa-github"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                ><span class="label">Github</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://x.com/CalenCoop"
+                class="icon brands fa-twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter / X"
+                ><span class="label">Twitter</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:CalenCoop1@gmail.com"
+                class="icon solid fa-envelope"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Email"
+                ><span class="label">Email</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
